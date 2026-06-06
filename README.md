@@ -55,8 +55,8 @@ Visit the portfolio to explore my projects, skills, and achievements.
 ## Connect With Me
 
 - GitHub: https://github.com/zaid753
-- LinkedIn: Add your LinkedIn profile
-- Email: Add your professional email
+- LinkedIn: www.linkedin.com/in/mohammedjaid
+- Email: mohammedjaid813@gmail.com
 
 ---
 
