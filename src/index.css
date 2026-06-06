@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:is(.dark, .dark *));
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-primary: #3B82F6;
+  --color-secondary: #6366F1;
+  --color-dark: #0A0A0A;
+  --color-card: rgba(17, 17, 17, 0.8);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-slate-50 dark:bg-[#0A0A0A] text-slate-900 dark:text-gray-100 font-sans transition-colors duration-300;
+  }
+
+  .glass {
+    @apply backdrop-blur-md bg-white/70 dark:bg-black/70 border border-slate-200 dark:border-white/10 shadow-sm dark:shadow-none;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500;
+  }
+
+  .border-glow {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.15);
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+
+  .animate-blink {
+    animation: blink 1s step-end infinite;
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% { filter: drop-shadow(0 0 8px currentColor) brightness(1.2); transform: scale(1.1); }
+    50% { filter: drop-shadow(0 0 16px currentColor) brightness(1.5); transform: scale(1.25); }
+  }
+
+  .hover-animate-pulse-glow:hover {
+    animation: pulse-glow 1.5s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float-slow {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+
+  .animate-float-slow {
+    animation: float-slow 6s ease-in-out infinite;
+  }
+
+  @keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .animate-marquee {
+    animation: marquee 30s linear infinite;
+  }
+
+  .animate-marquee.animation-reverse {
+    animation-direction: reverse;
+  }
+
+  @media print {
+    @page { 
+      margin: 1.5cm;
+      size: A4;
+    }
+
+    body, html, .dark body {
+      background: white !important;
+      color: black !important;
+      font-size: 11pt !important;
+    }
+    
+    * {
+      color: black !important;
+      text-shadow: none !important;
+      box-shadow: none !important;
+    }
+
+    .glass {
+      background: transparent !important;
+      backdrop-filter: none !important;
+      border: 1px solid #ccc !important;
+    }
+
+    section {
+      page-break-inside: avoid;
+      padding: 1rem 0 !important;
+      margin: 0 !important;
+    }
+
+    /* Hide unnecessary UI elements */
+    button, nav, footer, canvas, .fixed, video, .particles, .hover-animate-pulse-glow, .animate-pulse {
+      display: none !important;
+    }
+
+    /* Convert grids to flex for better flow */
+    .grid {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 1.5rem !important;
+    }
+    
+    .text-gradient {
+      background: none !important;
+      -webkit-text-fill-color: black !important;
+      color: black !important;
+    }
+
+    /* Ensure text breaks words gracefully */
+    p, span, h1, h2, h3, h4 {
+      page-break-inside: avoid;
+      word-break: break-word !important;
+    }
+
+    /* Maintain project card structure but clean up backgrounds */
+    img {
+      max-width: 100% !important;
+      filter: grayscale(100%) !important;
+      page-break-inside: avoid;
+    }
+    
+    a {
+      text-decoration: none !important;
+    }
+    
+    /* Reveal URLs in print if they are links */
+    a[href^="http"]:after {
+      content: " (" attr(href) ")" !important;
+      font-size: 80% !important;
+      color: #666 !important;
+    }
+  }
+}
