@@ -3,10 +3,10 @@ import { Project } from '../types';
 export const projects: Project[] = [
   {
     id: 'stockpilot',
-    title: 'StockPilot 2.0',
+    title: 'StockPilot',
     description: 'AI-powered voice-based inventory system with smart invoice scanning and sales analytics dashboards.',
     tech: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'AI/ML', 'Tailwind CSS'],
-    github: 'https://github.com/zaid753/StockPilot-2.0',
+    github: 'https://github.com/zaid753/StockPilot',
     category: 'FullStack',
     accent: '#3B82F6',
     tag: 'AI-Powered',
@@ -17,7 +17,7 @@ export const projects: Project[] = [
     title: 'PulseTalk',
     description: 'AI telehealth platform for rural India with voice-based symptom triage and real-time teleconsultation.',
     tech: ['React.js', 'Node.js', 'Express.js', 'Firebase', 'Dialogflow', 'OpenAI API', 'WebRTC', 'Tailwind CSS'],
-    github: 'https://github.com/zaid753',
+    github: 'https://github.com/zaid753/Pulsetalk',
     category: 'FullStack',
     accent: '#10B981',
     tag: '🏆 Hackathon Winner',
