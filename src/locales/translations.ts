@@ -50,7 +50,7 @@ export const en = {
     subtitle: 'A curation of my most impactful contributions and personal projects.',
     filter: 'Filter',
     code: 'Code',
-    demo: 'Live Demo',
+    demo: 'Live',
   },
   experience: {
     title: 'Work Experience',
