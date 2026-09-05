@@ -138,7 +138,7 @@ export function InteractiveTerminal() {
         pushOutput("Recent Projects:\n1. StockPilot - AI-powered voice-based inventory system\n2. PulseTalk - AI telehealth platform for rural India\n3. GlobeTrekker - AI-powered travel planner\n4. SpecIQ - AI-powered specification analysis\n5. NyayaSarathi - LegalTech platform using Gemini API\n6. NEBULA HAND - Real-Time Hand-Controlled Particle System");
         break;
       case 'experience':
-        pushOutput("Experience:\n- Campus Mantri @ GeeksforGeeks (2026)\n- Google Student Ambassador @ Google / Developer Ecosystem (2025-26)\n- Open Source Contributor @ Code Social (2025-26)\n- Project Intern @ IIT Kanpur Virtual Labs (MoE) (2024-25)\n- Web Dev Intern @ BhuBhraman (2024)");
+        pushOutput("Experience:\n- Artificial Intelligence Intern @ IBM (2026)\n- Campus Mantri @ GeeksforGeeks (2026)\n- Google Student Ambassador @ Google / Developer Ecosystem (2025-26)\n- Open Source Contributor @ Code Social (2025-26)\n- Project Intern @ IIT Kanpur Virtual Labs (MoE) (2024-25)\n- Web Dev Intern @ BhuBhraman (2024)");
         break;
       case 'education':
         pushOutput("Education:\n- Oriental Institute of Science and Technology, Bhopal (B.Tech, IT): 2021-2025\n- Excellent H.S. School, Bhopal: 2019-2021");

@@ -2,6 +2,17 @@ import { Experience } from '../types';
 
 export const experiences: Experience[] = [
   {
+    id: 'ibm-intern',
+    role: 'Artificial Intelligence Intern',
+    company: 'IBM',
+    location: 'Remote',
+    period: 'Jun 2026 – Aug 2026',
+    points: [
+      'Completed an IBMCEP Virtual Internship in Artificial Intelligence and developed HireSense AI, an AI-powered resume screening and candidate ranking system.',
+      'Gained hands-on experience in applying AI/ML concepts to build an end-to-end recruitment solution.'
+    ]
+  },
+  {
     id: 'gfg-mantri',
     role: 'Campus Mantri',
     company: 'GeeksforGeeks',

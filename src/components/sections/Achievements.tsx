@@ -28,7 +28,7 @@ const achievements = [
     date: 'February 2026'
   },
   {
-    title: '300+ LeetCode',
+    title: '350+ LeetCode',
     description: 'Arrays, Strings, Trees, Graphs, DP',
     longDescription: 'Consistently solving algorithmic challenges to sharpen problem-solving skills and master data structures including Dynamic Programming, Graphs, and Trees. Demonstrates a strong foundation in computer science principles.',
     icon: Code,
@@ -63,7 +63,7 @@ export function Achievements() {
 
   return (
     <Section id="achievements" title={t.achievements.title} subtitle={t.achievements.subtitle}>
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 auto-rows-[200px]">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 auto-rows-[minmax(220px,auto)]">
         {achievements.map((item, i) => (
           <TiltCard 
             key={i} 
@@ -77,26 +77,28 @@ export function Achievements() {
             tabIndex={0}
             role="button"
             className={cn(
-              "p-8 flex flex-col justify-between group transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/10 hover:border-blue-500/40 relative overflow-hidden bg-white/50 dark:bg-black/20 backdrop-blur-sm cursor-pointer", 
+              "group transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/10 hover:border-blue-500/40 relative overflow-hidden bg-white/50 dark:bg-black/20 backdrop-blur-sm cursor-pointer", 
               item.grid
             )}
           >
-            {/* Background oversized decorative icon */}
-            <div className="absolute -right-8 -bottom-8 opacity-[0.03] dark:opacity-[0.05] group-hover:scale-110 group-hover:-rotate-12 transition-transform duration-700 pointer-events-none">
-              <item.icon className="w-56 h-56" />
-            </div>
+            <div className="p-8 h-full flex flex-col justify-between relative z-10">
+              {/* Background oversized decorative icon */}
+              <div className="absolute -right-8 -bottom-8 opacity-[0.03] dark:opacity-[0.05] group-hover:scale-110 group-hover:-rotate-12 transition-transform duration-700 pointer-events-none">
+                <item.icon className="w-56 h-56" />
+              </div>
 
-            <div className={cn("w-12 h-12 rounded-xl flex items-center justify-center transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3 shadow-sm", item.bg, item.color)}>
-              <item.icon className="w-6 h-6" />
-            </div>
-            
-            <div className="relative z-10">
-              <h3 className="font-display font-bold text-xl md:text-2xl text-gray-900 dark:text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-gray-900 group-hover:to-gray-600 dark:group-hover:from-white dark:group-hover:to-gray-300 transition-colors duration-300">
-                {item.title}
-              </h3>
-              <p className="text-sm md:text-base text-gray-600 dark:text-gray-400 mt-2 font-medium">
-                {item.description}
-              </p>
+              <div className={cn("w-12 h-12 rounded-xl flex items-center justify-center transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3 shadow-sm", item.bg, item.color)}>
+                <item.icon className="w-6 h-6" />
+              </div>
+              
+              <div className="relative z-10 mt-6">
+                <h3 className="font-display font-bold text-xl md:text-2xl text-gray-900 dark:text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-gray-900 group-hover:to-gray-600 dark:group-hover:from-white dark:group-hover:to-gray-300 transition-colors duration-300">
+                  {item.title}
+                </h3>
+                <p className="text-sm md:text-base text-gray-600 dark:text-gray-400 mt-2 font-medium">
+                  {item.description}
+                </p>
+              </div>
             </div>
           </TiltCard>
         ))}

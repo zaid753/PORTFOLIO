@@ -9,7 +9,7 @@ export function About() {
 
   const stats = [
     { label: t.about.stats.projects, value: '8+' },
-    { label: t.about.stats.leetcode, value: '300+' },
+    { label: t.about.stats.leetcode, value: '350+' },
     { label: t.about.stats.students, value: '1000+' },
     { label: t.about.stats.participation, value: '10+' },
   ];
